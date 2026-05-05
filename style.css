@@ -1,0 +1,410 @@
+/* COLORADO GHOST STORIES - Early Internet Aesthetic */
+/* Best viewed in Netscape Navigator 4.0 or higher! */
+
+body {
+  background-color: #000033;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><text x='2' y='14' font-family='monospace' font-size='12' fill='%23ffff00'>*</text><text x='22' y='30' font-family='monospace' font-size='10' fill='%23ffffff'>.</text><text x='10' y='38' font-family='monospace' font-size='8' fill='%23ffffff'>+</text><text x='30' y='10' font-family='monospace' font-size='8' fill='%23ffaaaa'>.</text></svg>");
+  color: #00ff00;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+a:link    { color: #00ffff; text-decoration: underline; }
+a:visited { color: #ff66ff; text-decoration: underline; }
+a:hover   { color: #ffff00; background-color: #660066; }
+a:active  { color: #ff0000; }
+
+h1 {
+  font-family: "Comic Sans MS", "Chalkboard SE", cursive;
+  color: #ffff00;
+  text-shadow: 3px 3px 0 #ff00ff, 6px 6px 0 #ff0000;
+  font-size: 48px;
+  margin: 20px 0 10px 0;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-family: "Comic Sans MS", "Chalkboard SE", cursive;
+  color: #ff9900;
+  text-shadow: 2px 2px 0 #660000;
+  font-size: 30px;
+  border-top: 4px ridge #ffff00;
+  border-bottom: 4px ridge #ffff00;
+  padding: 8px;
+  margin: 30px 0 15px 0;
+}
+
+h3 {
+  font-family: "Comic Sans MS", "Chalkboard SE", cursive;
+  color: #ff66ff;
+  font-size: 22px;
+  margin: 25px 0 5px 0;
+}
+
+p {
+  text-align: left;
+  color: #ffffff;
+  margin: 10px 20px;
+  line-height: 1.6;
+}
+
+.page {
+  width: 880px;
+  margin: 0 auto;
+  background-color: #1a0033;
+  border: 6px outset #ff9900;
+  padding: 20px;
+  text-align: center;
+}
+
+.banner {
+  background: linear-gradient(90deg, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000);
+  background-size: 200% 100%;
+  animation: rainbow 3s linear infinite;
+  color: #000000;
+  font-family: "Comic Sans MS", cursive;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 12px;
+  border: 4px ridge #ffff00;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 0 #ffffff;
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.marquee {
+  width: 100%;
+  background-color: #000000;
+  color: #00ff00;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  border: 2px inset #00ff00;
+  padding: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 15px 0;
+  box-sizing: border-box;
+}
+
+.marquee-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+
+.blink {
+  animation: blink 1s steps(2, start) infinite;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  to { visibility: hidden; }
+}
+
+.nav {
+  background-color: #330066;
+  border: 4px ridge #ffff00;
+  padding: 12px;
+  margin: 15px 0;
+  font-family: "Comic Sans MS", cursive;
+  font-size: 16px;
+}
+
+.nav a {
+  margin: 4px;
+  padding: 4px 8px;
+  background-color: #000000;
+  border: 2px outset #00ffff;
+  display: inline-block;
+}
+
+.story {
+  background-color: #000000;
+  border: 4px inset #00ff00;
+  padding: 15px;
+  margin: 25px 10px;
+  text-align: left;
+}
+
+.story p {
+  color: #cccccc;
+  font-size: 15px;
+  margin: 8px 5px;
+}
+
+.story h3 {
+  text-align: center;
+  margin-top: 0;
+  border-bottom: 2px dashed #ff66ff;
+  padding-bottom: 5px;
+}
+
+.story-image {
+  display: block;
+  margin: 15px auto;
+  max-width: 90%;
+  border: 4px ridge #ffff00;
+  padding: 4px;
+  background-color: #220033;
+}
+
+.story-image img {
+  max-width: 100%;
+  display: block;
+}
+
+.image-caption {
+  text-align: center;
+  font-family: "Comic Sans MS", cursive;
+  color: #ff99ff;
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+/* Simple drop-in photo: paste any image URL into src="" and it displays */
+.photo {
+  display: block;
+  margin: 12px auto 6px auto;
+  max-width: 480px;
+  width: auto;
+  height: auto;
+  border: 4px ridge #ffff00;
+  padding: 4px;
+  background-color: #220033;
+}
+
+/* If src is empty, hide the broken-image icon */
+.photo[src=""],
+.photo:not([src]) {
+  display: none;
+}
+
+.photo-caption {
+  text-align: center;
+  font-family: "Comic Sans MS", cursive;
+  color: #ff99ff;
+  font-size: 12px;
+  font-style: italic;
+  margin: 0 0 12px 0;
+}
+
+.photo-help {
+  background-color: #002200;
+  border: 3px dashed #00ff00;
+  color: #aaffaa;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  padding: 10px 14px;
+  margin: 15px 10px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.photo-help code {
+  background-color: #000000;
+  color: #ffff00;
+  padding: 2px 4px;
+  font-size: 12px;
+  border: 1px solid #00ff00;
+}
+
+.warning {
+  background-color: #ffff00;
+  color: #ff0000;
+  border: 4px ridge #ff0000;
+  padding: 10px;
+  font-family: "Comic Sans MS", cursive;
+  font-weight: bold;
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+.section-intro {
+  background-color: #220044;
+  border: 3px dashed #ff9900;
+  padding: 12px 18px;
+  margin: 15px 10px;
+  text-align: left;
+  color: #ffccff;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.footer {
+  margin-top: 40px;
+  padding: 15px;
+  border-top: 4px ridge #ffff00;
+  font-size: 12px;
+  color: #aaaaaa;
+  font-family: "Courier New", monospace;
+}
+
+.counter {
+  display: inline-block;
+  background-color: #000000;
+  color: #00ff00;
+  font-family: "Courier New", monospace;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border: 2px inset #00ff00;
+  letter-spacing: 4px;
+}
+
+.ghost-divider {
+  font-family: "Courier New", monospace;
+  color: #ffffff;
+  font-size: 14px;
+  margin: 20px 0;
+  letter-spacing: 4px;
+}
+
+.ascii-art {
+  font-family: "Courier New", monospace;
+  white-space: pre;
+  color: #ff66ff;
+  font-size: 12px;
+  line-height: 1.1;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.under-construction {
+  background-color: #ffff00;
+  color: #000000;
+  font-family: "Comic Sans MS", cursive;
+  font-weight: bold;
+  border: 6px ridge #ff9900;
+  padding: 8px;
+  margin: 20px auto;
+  width: 60%;
+  font-size: 16px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #ffff00,
+    #ffff00 10px,
+    #000000 10px,
+    #000000 20px
+  );
+  background-clip: padding-box;
+}
+
+.web-ring {
+  background-color: #000033;
+  border: 3px groove #00ffff;
+  padding: 10px;
+  margin: 20px auto;
+  width: 70%;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  color: #ffff00;
+}
+
+blockquote {
+  border-left: 4px solid #ff66ff;
+  background-color: #220033;
+  color: #ffccff;
+  padding: 10px 15px;
+  margin: 15px 25px;
+  font-style: italic;
+  text-align: left;
+}
+
+.thesis {
+  background-color: #330066;
+  border: 4px double #ffff00;
+  padding: 15px;
+  margin: 20px 10px;
+  text-align: left;
+  color: #ffff00;
+  font-family: "Comic Sans MS", cursive;
+  font-size: 16px;
+}
+
+.essay-section {
+  background-color: #110022;
+  border: 2px solid #ff9900;
+  padding: 18px;
+  margin: 20px 5px;
+  text-align: left;
+}
+
+.essay-section p {
+  color: #eeeeee;
+  font-family: "Times New Roman", serif;
+  font-size: 15px;
+  text-align: justify;
+}
+
+.citation {
+  font-size: 11px;
+  color: #aaaaaa;
+  font-family: "Courier New", monospace;
+  background-color: #000000;
+  padding: 8px;
+  border-top: 1px dashed #aaaaaa;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.story-title {
+  color: #ffff00 !important;
+  font-family: "Comic Sans MS", cursive;
+}
+
+.story-citation {
+  margin-top: 18px;
+  padding: 8px 10px;
+  border-top: 2px dashed #ff66ff;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  color: #cc99ff;
+  text-align: right;
+  font-style: italic;
+}
+
+.story-citation .source-label {
+  color: #ffff00;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.flag {
+  background-color: #440000;
+  border: 2px dashed #ff0000;
+  padding: 8px 12px;
+  margin: 10px 5px;
+  font-size: 13px;
+  color: #ffaaaa;
+  text-align: left;
+}
+
+.essay-header {
+  text-align: center;
+  font-family: "Times New Roman", serif;
+  color: #eeeeee;
+  margin: 0;
+  padding: 15px;
+  background-color: #000000;
+  border: 2px solid #ffff00;
+}
+
+.essay-header div {
+  color: #ffff00;
+  font-size: 14px;
+  margin: 2px 0;
+}
